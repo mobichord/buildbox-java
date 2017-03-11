@@ -1,6 +1,6 @@
 FROM openjdk:8u121-jdk-alpine
 
-RUN apk add --no-cache curl wget tar bash git
+RUN apk add --no-cache curl wget tar bash git openssh-client
 
 ARG MAVEN_VERSION=3.3.9
 ARG USER_HOME_DIR="/root"
