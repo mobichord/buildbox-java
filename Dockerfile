@@ -87,6 +87,6 @@ RUN set -ex \
 			| sort -u \
 	)" \
 	&& apk add --virtual .python-rundeps $runDeps \
+	&& pip install boto3 argparse awscli \
 	&& apk del .build-deps \
-	&& rm -rf /usr/src/python ~/.cache \
-	&& pip install boto3 argparse awscli
+	&& rm -rf /usr/src/python ~/.cache
