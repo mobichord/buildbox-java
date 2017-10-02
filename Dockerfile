@@ -9,9 +9,9 @@ RUN apk add --no-cache curl wget tar bash git openssh-client ca-certificates
 ARG MAVEN_VERSION=3.3.9
 ARG USER_HOME_DIR="/root"
 
-ENV PYTHON_VERSION 2.7.13
 ENV PYTHON_PIP_VERSION 9.0.1
 ENV GPG_KEY C01E1CAD5EA2C4F0B8E3571504C367C218ADD4FF
+ENV PYTHON_VERSION 2.7.14
 
 # Install maven
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
