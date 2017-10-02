@@ -13,6 +13,17 @@ ENV PYTHON_PIP_VERSION 9.0.1
 ENV GPG_KEY C01E1CAD5EA2C4F0B8E3571504C367C218ADD4FF
 ENV PYTHON_VERSION 2.7.14
 
+ARG DOCKER_CLI_VERSION="17.06.2-ce"
+ENV DOWNLOAD_URL="https://download.docker.com/linux/static/stable/x86_64/docker-$DOCKER_CLI_VERSION.tgz"
+
+# Install Docker client
+RUN set -ex \
+	&& mkdir -p /tmp/download \
+	&& curl -L $DOWNLOAD_URL | tar -xz -C /tmp/download \
+	&& mv /tmp/download/docker/docker /usr/bin/docker \
+	&& chmod +x /usr/bin/docker \
+    && rm -rf /tmp/download
+
 # Install maven
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
   && curl -fsSL http://apache.osuosl.org/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz \
