@@ -1,4 +1,4 @@
-FROM openjdk:8u121-jdk-alpine
+FROM openjdk:8u131-jdk-alpine
 
 ENV PATH /usr/local/bin:$PATH
 
