@@ -6,7 +6,7 @@ ENV LANG C.UTF-8
 
 RUN apk add --no-cache curl wget tar bash git openssh-client ca-certificates
 
-ARG MAVEN_VERSION=3.3.9
+ARG MAVEN_VERSION=3.5.4
 ARG USER_HOME_DIR="/root"
 
 ENV PYTHON_PIP_VERSION 9.0.1
