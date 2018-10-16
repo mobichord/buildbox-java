@@ -1,4 +1,4 @@
-FROM openjdk:8u131-jdk-alpine
+FROM mobichord/openjdk-alpine:11-jdk
 
 ENV PATH /usr/local/bin:$PATH
 
@@ -43,7 +43,7 @@ RUN set -ex \
 	&& wget -O python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" \
 	&& wget -O python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" \
 	&& export GNUPGHOME="$(mktemp -d)" \
-	&& gpg --keyserver 67.205.155.18 --recv-keys "$GPG_KEY" \
+	&& gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$GPG_KEY" \
 	&& gpg --batch --verify python.tar.xz.asc python.tar.xz \
 	&& rm -r "$GNUPGHOME" python.tar.xz.asc \
 	&& mkdir -p /usr/src/python \
