@@ -37,7 +37,7 @@ ENV PYTHON_VERSION 3.8.5-r0
 
 ARG DOCKER_CLI_VERSION="18.06.3-ce"
 ARG DOCKER_CLI_VERSION_DOS="24.0.7"
-ENV DOWNLOAD_URL="https://download.docker.com/linux/static/stable/x86_64/docker-$DOCKER_CLI_VERSION_DOS.tgz"
+ENV DOWNLOAD_URL="https://download.docker.com/linux/static/stable/x86_64/docker-$DOCKER_CLI_VERSION_DO.tgz"
 
 # Install Docker client
 RUN set -ex \
