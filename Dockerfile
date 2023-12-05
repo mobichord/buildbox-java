@@ -1,4 +1,4 @@
-FROM openjdk:15-jdk-alpine
+FROM openjdk:15-jdk-alpine3.12
 
 ENV PATH /usr/local/bin:$PATH
 
