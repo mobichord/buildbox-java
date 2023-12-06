@@ -1,5 +1,6 @@
 # Use the Eclipse Temurin base image with Java
-FROM eclipse-temurin:21.0.1_12-jdk-alpine
+#FROM eclipse-temurin:17-jdk-alpine
+FROM  azul/zulu-openjdk-alpine:17-jre-latest
 
 # Set environment variables
 ENV LANG C.UTF-8
