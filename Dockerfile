@@ -1,7 +1,6 @@
 # Use the Eclipse Temurin base image with Java
 #FROM eclipse-temurin:17-jdk-alpine
-FROM  azul/zulu-openjdk-alpine:17-jre-latest
-
+FROM azul/zulu-openjdk-alpine:17-latest
 # Set environment variables
 ENV LANG C.UTF-8
 ENV PYTHON_PIP_VERSION 23.3.1
