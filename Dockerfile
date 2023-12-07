@@ -1,6 +1,23 @@
-# Use the Eclipse Temurin base image with Java
-#FROM eclipse-temurin:17-jdk-alpine
-FROM azul/zulu-openjdk-alpine:17-latest
+# Use a base image with a minimal Alpine Linux and add Java
+FROM alpine:latest
+
+# Install necessary packages
+RUN apk update && apk add --no-cache \
+    openjdk17 \
+    curl \
+    wget \
+    tar \
+    bash \
+    git \
+    openssh-client \
+    ca-certificates \
+    python3 \
+    openssl \
+    xz \
+    gcc \
+    musl-dev \
+    go
+
 # Set environment variables
 ENV LANG C.UTF-8
 ENV PYTHON_PIP_VERSION 23.3.1
