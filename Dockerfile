@@ -4,8 +4,8 @@ FROM  azul/zulu-openjdk-alpine:17-jre-latest
 
 # Set environment variables
 ENV LANG C.UTF-8
-ENV PYTHON_PIP_VERSION 20.2.3
-ENV PYTHON_VERSION 3.8.5-r0
+ENV PYTHON_PIP_VERSION 23.3.1
+ENV PYTHON_VERSION 3.12.0
 ENV GOROOT /usr/lib/go
 ENV GOPATH /go
 ENV PATH /usr/local/go/bin:$PATH:$GOPATH/bin
